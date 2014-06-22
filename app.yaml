@@ -1,0 +1,27 @@
+application: rollinggo
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /images
+  static_dir: images
+
+- url: /scripts
+  static_dir: scripts
+
+# Twitter Bootstrap
+- url: /bootstrap
+  static_dir: bootstrap
+
+# Handler for front page
+- url: /.*
+  script: rollinggo.app
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
