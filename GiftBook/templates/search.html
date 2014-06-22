@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://getbootstrap.com/examples/jumbotron/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+<title>RollingGo @ NUS</title>
+
+<!-- Bootstrap core CSS -->
+<link href="http://bootswatch.com/darkly/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+</head>
+
+    <body>
+
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/giftbook"> RollingGo! @ NUS </a>
+            <a class="navbar-brand" href="/search"> Search for events! </a>
+            <a class="navbar-brand" href="/wishlist"> Events Manager </a>
+          </div>
+          <div class="navbar-collapse collapse">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <span> {{ user_mail }} <a href="{{ logout }}">logout</a></span>          
+            </ul>
+          </div>
+        </div> 
+      </div>
+
+<div class = "jumbotron">
+<div class = "container">
+    <form action="/display" method="post">
+        <fieldset>
+            <div class="row-fluid">
+                <p> Search for events </p>
+                <div class="span12">
+                    Filter by event name: <input class="input-xlarge" type="text" name="search"><br><br>
+                    <input type = "submit" value = "Filter event name">
+                </div>
+            </div>
+        </fieldset>
+        <br>
+    </form>
+    <form action="/displaytag" method="post">
+            <div class="row-fluid">
+                <div class="span6">
+                    Or filter by tags: <br> <input type = "radio" name = "eventtype" value = "Fun"> Fun <br>
+                                  <input type = "radio" name = "eventtype" value = "Academics"> Academics<br><br>
+                                  <input type = "submit" value = "Filter tags">
+                </div>
+            </div>
+    </form>
+</div>
+</div>
+
+ <h4> Events List </h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th width="10%">Name</th>
+            <th>Description</th>
+            <th width = "10%">Link</th>
+            <th width = "10%">Date</th>
+            <th width = "10%">Type</th>
+            <th width = "10%">RSVP</th>
+            <th width = "10%">Rolling?</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.event_name }} </td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.event_link}}</td>
+                <td>{{ item.date.strftime('%Y-%m-%d')  }}</td>
+                <td>{{ item.event_type}}</td>
+                <td>{{ item.rsvp }}
+                <td>
+                    <form action="/rsvp" method="post">
+                        <input type="hidden" name="itemname" value="{{ item.event_name }}">
+                        <input type="hidden" name="itemdesc" value="{{ item.description }}">
+                        <input type="hidden" name="itemlink" value="{{ item.event_link }}">
+                        <input type="hidden" name="itemtype" value="{{ item.event_type }}">
+                        <input type="hidden" name="itemrsvp" value="{{ item.rsvp }}">
+                        <input type="hidden" name="itemdate" value="{{ item.date.strftime('%Y-%m-%d')}}">
+                        <input type="submit" value="GO!">
+                    </form></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <script src="./Bootstrap/Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
