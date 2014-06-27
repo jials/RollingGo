@@ -15,16 +15,7 @@
 
 <!-- Custom styles for this template -->
 <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
-
-<!-- Just for debugging purposes. Don't actually copy this line! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
+</head>
 
     <body>
 
@@ -37,22 +28,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://getbootstrap.com/examples/jumbotron/#"> RollingGo! @ NUS </a>
-            <a class="navbar-brand" href="/publicsearch"> Search for events! </a>
-            <a class="navbar-brand" href="/promote"> Promote your event! </a>
+            <a class="navbar-brand" href="/"> RollingGo! @ NUS </a>
           </div>
           <div class="navbar-collapse collapse">
 
 
             <ul class="nav navbar-nav navbar-right">
-              <button class="btn btn-warning navbar-btn"  data-toggle="modal" data-target="#login">Login</button>            
+                <button class="btn btn-warning navbar-btn"  data-toggle="modal" data-target="#login">Login</button>  
             </ul>
           </div>
         </div> 
       </div> 
 
-
-      <!--Modal-->
+            <!--Modal-->
       <div id = "login" class = "modal fade" aria-labelledby = "login" tabindex="-1" role="dialog" aria-hidden = "true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -63,16 +51,13 @@
             <div class="modal-body">
               <div style = "float: center;">
                 <!--To be modified-->
-                <a href="http://calcollate.appspot.com/_ah/login_redir?claimid=https://www.google.com/accounts/o8/id&continue=http://calcollate.appspot.com/" class="btn btn-success">Google</a>
-                <a href="http://calcollate.appspot.com/_ah/login_redir?claimid=openid.nus.edu.sg&continue=http://calcollate.appspot.com/" class="btn btn-primary">NUSNET</a>
+                <a href="/giftbook" class="btn btn-success">Google</a>
+                <a href="/getOpenId" class="btn btn-primary">NUSNET</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-
-
 
         <!-- Carousel
         ================================================== -->
@@ -147,8 +132,8 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Bootstrap/Jumbotron Template for Bootstrap_files/jquery.min.js"></script>
-    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../bootstrap/jumbotron/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
   </body>
   </html>

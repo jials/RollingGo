@@ -1,0 +1,57 @@
+﻿Implemented NUS OpenID. Deployed website's login is bugged. To be fixed.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   Bootstrap/jumbotron.htm
+#	new file:   Bootstrap/jumbotron/bootstrap.min.js
+#	new file:   Bootstrap/jumbotron/jquery.min.js
+#	new file:   GiftBook/bootstrap/img/Thumbs.db
+#	modified:   GiftBook/giftbook.py
+#	modified:   GiftBook/giftbook.pyc
+#	new file:   GiftBook/images/Thumbs.db
+#	new file:   index.yaml
+#	new file:   templates/display.html
+#	new file:   templates/displaytag.html
+#	new file:   templates/front.html
+#	new file:   templates/frontuser.html
+#	new file:   templates/rsvp.html
+#	new file:   templates/search.html
+#	new file:   templates/wishlist.html
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    Bootstrap/Jumbotron Template for Bootstrap.htm
+#	deleted:    Bootstrap/Jumbotron Template for Bootstrap_files/bootstrap.min.js
+#	deleted:    Bootstrap/Jumbotron Template for Bootstrap_files/jquery.min.js
+#	deleted:    RollingGo/app.yaml
+#	deleted:    RollingGo/engineapp/app.yaml
+#	deleted:    RollingGo/engineapp/engineapp/app.yaml
+#	deleted:    RollingGo/engineapp/engineapp/favicon.ico
+#	deleted:    RollingGo/engineapp/engineapp/index.yaml
+#	deleted:    RollingGo/engineapp/engineapp/main.py
+#	deleted:    RollingGo/engineapp/engineapp/main.pyc
+#	deleted:    RollingGo/engineapp/favicon.ico
+#	deleted:    RollingGo/engineapp/index.yaml
+#	deleted:    RollingGo/engineapp/main.py
+#	deleted:    RollingGo/engineapp/main.pyc
+#	deleted:    RollingGo/favicon.ico
+#	deleted:    RollingGo/index.yaml
+#	deleted:    RollingGo/main.py
+#	modified:   app.yaml
+#	deleted:    engineapp/app.yaml
+#	deleted:    engineapp/favicon.ico
+#	deleted:    engineapp/index.yaml
+#	deleted:    engineapp/main.py
+#	deleted:    engineapp/main.pyc
+#	modified:   rollinggo.py
+#	modified:   rollinggo.pyc
+#	deleted:    templates/main.htm
+#	deleted:    templates/promote.htm
+#	deleted:    templates/publicsearch.htm
+#
+
